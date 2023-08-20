@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafaf9;
+  color: #1c1917;
+  font-family: "Sono", sans-serif;
+  padding: 48px 64px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5frem;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.disputed {
+  color: red;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 48px;
+}
+
+.header {
+  margin-bottom: 40px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center; /*vertical*/
+  justify-content: space-between; /*horizontal*/
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/*FORM*/
+
+.fact-form {
+  background-color: #e7e5e4;
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  min-width: 220px;
+  background-color: #f1f0f0;
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.logo img {
+  height: 68px;
+  width: 68px;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Coiny", sans-serif;
+  color: #3b82f6;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.fact {
+  font-size: 20px;
+  line-height: 1.4;
+  background-color: #e7e5e4;
+  margin-bottom: 16px;
+  padding: 16px 24px;
+  letter-spacing: -1px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "Coiny", sans-serif;
+  color: #fafaf9;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+
+.vote-buttons {
+  margin-left: auto;
+  flex-shrink: 0;
+
+  display: flex;
+  gap: 8px;
+}
+
+.vote-buttons button {
+  border: none;
+  background-color: #d6d3d1;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.vote-buttons button:hover {
+  background-color: #292524;
+  color: #fafaf9;
+}
+
+.vote-buttons button:disabled {
+  background-color: #696969;
+  color: #fafaf9;
+}
+
+ul {
+  list-style: none;
+}
+
+.source:link,
+.source:visited {
+  color: #78716c;
+  text-decoration: none;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.source:hover,
+.source:active {
+  color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 17px 0 13px;
+  background-image: linear-gradient(135deg, #e11d48, #db2777, #c026d3, #9333ea);
+  color: #fafaf9;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(110%) rotate(-1deg);
+}
+
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+}
+
+.btn-all-categories {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.btn-category {
+  width: 100%;
+  background-image: none;
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fact-form {
+    padding: 16px;
+  }
+
+  .fact {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    padding: 32px 48px;
+  }
+
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fact-form input,
+  .fact-form select {
+    width: auto;
+  }
+
+  @media (max-width: 1200px) {
+    .fact {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px; /*vertical and horizontal*/
+    }
+  }
+}
